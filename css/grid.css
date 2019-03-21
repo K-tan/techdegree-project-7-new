@@ -2,23 +2,25 @@
 .main-container {
   max-width: 1400px;
   display: grid;
+  grid-template-areas:
+  "header"
+  "nav"
+  "main";
+}
+
+/* GRID AREA PROPERTIES */
+header {
+  grid-area: header;
   
 }
 
+nav {
+  grid-area: nav;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+main {
+  grid-area: main;
+}
 
 
 /* MOBILE 320PX */
@@ -26,11 +28,7 @@
 
 
 
-
-
 /* TABLET 768PX */
-
-
 
 
 
