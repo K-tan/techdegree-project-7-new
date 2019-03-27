@@ -82,9 +82,11 @@ nav ul li {
 }
 
 /* MAIN STYLES */
+
+/* ********************************DASHBOARD & SEARCH******************************** */
 .dashboard-title {
   display: inline-block;
-  margin-left: 2%;
+  margin-left: 2.5%;
 }
 
 .dashboard-search {
@@ -93,11 +95,101 @@ nav ul li {
   position: absolute;
   right: 10px;
 }
-
+/* ********************************ALERT******************************** */
 main .alert {
-  display: block;
-  margin: 0;
-  width: 90%;
-  margin: 5%;
+  padding: 1px;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: #9999CC;
+  color: white;
+}
+
+main .alert span {
+  font-weight: bold;
+}
+
+.alert-button {
+  position: absolute;
+  float: right;
+  right: 10px;
+  background-color: #9999CC;
+  border: none;
+  color: white;
+}
+
+/* ********************************CHARTS******************************** */
+
+/* ********************************SOCIAL-STATS******************************** */
+.social-stats-container {
+  width: 95%;
+  margin-left: 2.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.logo {
+  margin-top: 12.5px;
+  width: 45px;
+  height: 45px;
+}
+
+.stats {
+  text-align: center;
+  padding: 5%;
+  display: inline;
+  border: 1px solid black;
+  background-color: #edeff2;
+}
+
+.sm-platform {
+  font-size: 18px;
+  font-weight: bold;
+  color: #9999CC;
+  margin: 0;
+}
+
+.count {
+  font-size: 26px;
+  font-weight: lighter;
+  color: black;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.info {
+  display: inline-block;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background-color: #9999CC;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ********************************four grid layout******************************** */
+
+/* ********************************New Members******************************** */
+.new-members {
+  width: 95%;
+  text-align: center;
+}
+
+.new-members h4{
+  text-align: left;
+}
+
+.new-members img  {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.new-members li  {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
 }
