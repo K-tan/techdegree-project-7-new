@@ -12,6 +12,92 @@
   clear: both;
 }
 
+/* HEADER STYLES */
+
+.appName {
+font-weight: bold;
+color: white;
+display: inline-block;
+}
+
+.appName h2{
+margin: 10%;
+float: left;
+}
+
+.appNameSpan {
+font-weight: lighter;
+}
+
+.header-right {
+  display: inline;
+  position: absolute;
+  right: 10px;
+}
+
 .bell {
-  
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.header-right img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.vertical-line {
+  display: inline-block;
+  border: 1px solid #CCCCCC;
+  background-color: #CCCCCC;
+  width: 1px;
+}
+
+.profile-name {
+  display: inline-block;
+}
+
+.header-right p{
+  display: inline-block;
+}
+
+/* NAV STYLES */
+nav ul {
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin: 2.5%;
+  padding: 0;
+  display: inline-block;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+/* MAIN STYLES */
+.dashboard-title {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.dashboard-search {
+  margin-top: 5%;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+}
+
+main .alert {
+  display: block;
+  margin: 0;
+  width: 90%;
+  margin: 5%;
+  background-color: #9999CC;
 }

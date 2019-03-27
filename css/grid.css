@@ -1,6 +1,7 @@
 
 .main-container {
-  max-width: 1400px;
+  width: auto;
+  margin: auto;
   display: grid;
   grid-template-areas:
   "header"
@@ -11,11 +12,12 @@
 /* GRID AREA PROPERTIES */
 header {
   grid-area: header;
-  
+  background-color: #9999CC;
 }
 
 nav {
   grid-area: nav;
+  background-color: #666699;
 }
 
 main {
