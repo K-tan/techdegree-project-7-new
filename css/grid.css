@@ -1,6 +1,7 @@
-
+/* MOBILE 320PX */
 .main-container {
-  width: auto;
+  max-width: 100%;
+  width: 100%
   margin: auto;
   display: grid;
   grid-template-areas:
@@ -24,16 +25,7 @@ main {
   grid-area: main;
 }
 
-
-/* MOBILE 320PX */
-
-
-
-
 /* TABLET 768PX */
-
-
-
 
 
 /* DESKTOP 1024PX */

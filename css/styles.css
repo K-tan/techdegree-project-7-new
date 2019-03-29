@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-weight:
 }
 
 .clearfix:before,
@@ -95,6 +96,12 @@ nav ul li {
   position: absolute;
   right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .dashboard-search {
+    margin-top: 2.5%;
+  }
+}
 /* ********************************ALERT******************************** */
 main .alert {
   padding: 1px;
@@ -119,13 +126,14 @@ main .alert span {
 }
 
 /* ********************************CHARTS******************************** */
-
+canvas {
+  max-width: 100%;
+}
 /* ********************************SOCIAL-STATS******************************** */
 .social-stats-container {
-  width: 95%;
   margin-left: 2.5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit);
   grid-gap: 20px;
 }
 
@@ -137,7 +145,8 @@ main .alert span {
 
 .stats {
   text-align: center;
-  padding: 5%;
+  height: 100px;
+  padding-top: 2.5%;
   display: inline;
   border: 1px solid black;
   background-color: #edeff2;
@@ -163,6 +172,7 @@ main .alert span {
 }
 
 .circle {
+  max-width: 100%;
   width: 70px;
   height: 70px;
   background-color: #9999CC;
@@ -172,24 +182,185 @@ main .alert span {
 
 /* ********************************four grid layout******************************** */
 
-/* ********************************New Members******************************** */
-.new-members {
-  width: 95%;
-  text-align: center;
+/* ********************************New Members & Recent Activities******************************** */
+.new-members,
+.recent-activity {
+  max-width: 100%;
 }
 
-.new-members h4{
-  text-align: left;
+.new-members ul,
+.recent-activity ul {
+  list-style-type: none;
+
 }
 
-.new-members img  {
-  width: 50px;
-  height: 50px;
+.member-list {
+  padding: 0;
+}
+
+.new-members li,
+.recent-activity li {
+  border-bottom: 1px solid black;
+  margin-bottom: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.new-members img,
+.recent-activity img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
-.new-members li  {
-  list-style-type: none;
-  border-bottom: 1px solid black;
-  margin-top: 10px;
+.new-members p,
+.recent-activity p {
+  margin: 0;
+}
+
+.member-details {
+  width: 50%;
+  margin: 0;
+  padding-left: 2.5%;
+  display: inline-block;
+}
+
+.activity-details {
+  width: 80%;
+  margin: 0;
+  padding-left: 2.5%;
+  display: inline-block;
+}
+
+.date {
+  padding-left: 20%;
+  width: 10%;
+  margin: 0;
+  display: inline-block;
+}
+
+.open {
+  color:  #9999CC;
+  margin: 0;
+  display: inline-block;
+}
+
+/* ********************************Message User******************************** */
+
+.message-user {
+  max-width: 100%;
+  text-align: center;
+}
+
+.message-user h4 {
+  text-align: left;
+}
+
+.message-user input {
+  width: 95%;
+  margin-bottom: 2.5%;
+  background-color: #edeff2;
+  border: 1px solid #dcddde;
+  color: #c6c6c6;
+}
+
+textarea {
+  width: 95%;
+  margin-bottom: 2.5%;
+  background-color: #edeff2;
+  border: 1px solid #dcddde;
+  color: #c6c6c6;
+}
+
+#send {
+  width: 95%;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background-color: #9999CC;
+}
+
+/* ********************************Settings & Toggle******************************** */
+
+.settings {
+  max-width: 100%;
+}
+
+.settings p {
+  padding-left: 2.5%;
+  display: inline-block;
+  width: 50%;
+}
+
+.onoffswitch {
+  display: inline-block;
+  width: 50%;
+}
+
+.settings button {
+  margin-top: 2.5%;
+  width: 47.5%;
+}
+
+#save {
+  color: white;
+  font-weight: bold;
+  background-color: #9999CC;
+  border: none;
+}
+
+#cancel {
+  color: white;
+  font-weight: bold;
+  background-color: #ada9a9;
+  border: none;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #E8E8E8; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 12px;
+    background-color: #9999CC; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 12px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 17px; margin: 6.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #E8E8E8; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+select {
+  width: 96%;
 }

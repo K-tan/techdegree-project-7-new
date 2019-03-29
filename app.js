@@ -15,17 +15,30 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['16-22', '23-29', '30-5', '6-12', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(177, 150, 196)',
+            label: '',
+            lineTension: 0,
+            backgroundColor: 'rgba(177, 150, 196, 0.63)',
             borderColor: 'rgb(148, 123, 166)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            pointBackgroundColor: 'rgb(255, 255, 255)',
+            data: [0, 750, 1250, 1000, 1500, 2000, 1750, 1500, 1750, 1250, 1750, 2000, 1750, 2250]
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+        }
+      }
+    }
 });
 
 // DAILY TRAFFIC CHART - BAR CHART
@@ -36,17 +49,28 @@ var chart2 = new Chart(ctx2, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            backgroundColor: 'rgb(177, 150, 196)',
+            borderColor: 'rgb(177, 150, 196)',
+            data: [75, 100, 175, 125, 225, 200, 100]
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                }
+        }
+      }
+    }
 });
 
 // DAILY TRAFFIC CHART - BAR CHART
@@ -57,12 +81,11 @@ var chart3 = new Chart(ctx3, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Phones', 'Tablets', 'Desktop'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            backgroundColor: ['rgb(118, 182, 136)', 'rgb(85, 133, 138)', 'rgba(99, 0, 176, 0.44)'],
+            data: [20, 25, 55]
         }]
     },
 
