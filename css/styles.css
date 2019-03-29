@@ -233,7 +233,19 @@ canvas {
 
 /* ********************************New Members & Recent Activities******************************** */
 
-
+@media screen and (min-width: 1024px) {
+  .top-two {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .new-members {
+    width: 50%;
+  }
+  .recent-activity {
+    width: 50%;
+  }
+}
 
 .new-members,
 .recent-activity {
@@ -297,6 +309,19 @@ canvas {
 }
 
 /* ********************************Message User******************************** */
+@media screen and (min-width: 1024px) {
+  .bottom-two {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .message-user {
+    width: 50%;
+  }
+  .settings {
+    width: 50%;
+  }
+}
 
 .message-user {
   max-width: 100%;
