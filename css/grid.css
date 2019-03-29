@@ -1,7 +1,7 @@
 /* MOBILE 320PX */
 .main-container {
   max-width: 100%;
-  width: 100%
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-areas:
@@ -29,3 +29,12 @@ main {
 
 
 /* DESKTOP 1024PX */
+@media (min-width: 1024px) {
+  .main-container {
+    grid-template-columns: 5% 47.5% 47.5%;
+    grid-template-areas:
+    "header header header"
+    "nav main main"
+    "nav main main"
+  }
+}

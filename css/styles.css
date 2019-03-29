@@ -82,6 +82,14 @@ nav ul li {
   height: 40px;
 }
 
+@media screen and (min-width: 1024px) {
+.icons {
+    width: 40px;
+    height: 40px;
+    padding-top: 15px;
+  }
+}
+
 /* MAIN STYLES */
 
 /* ********************************DASHBOARD & SEARCH******************************** */
@@ -97,9 +105,15 @@ nav ul li {
   right: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .dashboard-search {
     margin-top: 2.5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dashboard-search {
+    margin-top: 1%;
   }
 }
 /* ********************************ALERT******************************** */
@@ -116,6 +130,13 @@ main .alert span {
   font-weight: bold;
 }
 
+@media screen and (min-width: 1024px) {
+  .alert p {
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+  }
+}
+
 .alert-button {
   position: absolute;
   float: right;
@@ -128,6 +149,18 @@ main .alert span {
 /* ********************************CHARTS******************************** */
 canvas {
   max-width: 100%;
+}
+
+.traffic-chart {
+
+}
+
+@media screen and (min-width: 1024px) {
+.chart-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 /* ********************************SOCIAL-STATS******************************** */
 .social-stats-container {
@@ -150,6 +183,22 @@ canvas {
   display: inline;
   border: 1px solid black;
   background-color: #edeff2;
+}
+
+@media screen and (min-width: 1024px) {
+  .stats {
+    padding-top: 1%;
+  }
+
+  .social-stats-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stats {
+    width: 31.6%;
+  }
 }
 
 .sm-platform {
@@ -183,6 +232,9 @@ canvas {
 /* ********************************four grid layout******************************** */
 
 /* ********************************New Members & Recent Activities******************************** */
+
+
+
 .new-members,
 .recent-activity {
   max-width: 100%;
