@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-weight:
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .clearfix:before,
@@ -40,13 +40,34 @@ font-weight: lighter;
   width: 25px;
   height: 25px;
   display: inline-block;
+
+}
+
+.bell:hover{
+  transform: rotate(45deg);
+}
+
+.alert-dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: green;
+  display: inline;
+  float: right;
+  position: absolute;
+  left: 15px;
+  top: 7px;
 }
 
 .header-right img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+  width: 35px;
+  height: 35px;
+  display: inline;
+}
+
+.profile-photo {
+  margin-top: 7.5px;
 }
 
 .vertical-line {
@@ -61,7 +82,8 @@ font-weight: lighter;
 }
 
 .header-right p{
-  display: inline-block;
+  display: inline;
+  margin: 0;
 }
 
 /* NAV STYLES */
@@ -95,7 +117,7 @@ nav ul li {
 /* ********************************DASHBOARD & SEARCH******************************** */
 .dashboard-title {
   display: inline-block;
-  margin-left: 2.5%;
+  margin-left: 1%;
 }
 
 .dashboard-search {
@@ -139,6 +161,8 @@ main .alert span {
 
 .alert-button {
   position: absolute;
+  font-weight: bold;
+  font-size: 15px;
   float: right;
   right: 10px;
   background-color: #9999CC;
@@ -147,6 +171,11 @@ main .alert span {
 }
 
 /* ********************************CHARTS******************************** */
+
+.h4 {
+  margin-left: 1%;
+}
+
 canvas {
   max-width: 100%;
 }
@@ -163,6 +192,11 @@ canvas {
   }
 }
 /* ********************************SOCIAL-STATS******************************** */
+
+.social-stat-heading {
+  margin-left: 1%;
+}
+
 .social-stats-container {
   margin-left: 2.5%;
   display: grid;
@@ -181,7 +215,7 @@ canvas {
   height: 100px;
   padding-top: 2.5%;
   display: inline;
-  border: 1px solid black;
+  border: 2px solid #d7d9db;
   background-color: #edeff2;
 }
 
@@ -194,6 +228,8 @@ canvas {
     width: 95%;
     display: flex;
     justify-content: space-between;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
   }
 
   .stats {
@@ -241,15 +277,22 @@ canvas {
   }
   .new-members {
     width: 50%;
+    border-right: 1px solid #d7d9db;
+    padding-left: 1%;
+    padding-right: 1%;
   }
   .recent-activity {
     width: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 
 .new-members,
 .recent-activity {
   max-width: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .new-members ul,
@@ -264,7 +307,7 @@ canvas {
 
 .new-members li,
 .recent-activity li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d7d9db;
   margin-bottom: 2.5%;
   padding-bottom: 2.5%;
 }
@@ -308,6 +351,7 @@ canvas {
   display: inline-block;
 }
 
+
 /* ********************************Message User******************************** */
 @media screen and (min-width: 1024px) {
   .bottom-two {
@@ -317,15 +361,24 @@ canvas {
   }
   .message-user {
     width: 50%;
+    border-right: 1px solid #d7d9db;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-top: 1px solid #d7d9db;
   }
   .settings {
+    border-top: 1px solid #d7d9db;
     width: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 
 .message-user {
   max-width: 100%;
   text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .message-user h4 {
@@ -354,12 +407,22 @@ textarea {
   letter-spacing: 1px;
   font-weight: bold;
   background-color: #9999CC;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  margin-top: 4.5%;
 }
 
 /* ********************************Settings & Toggle******************************** */
+@media screen and (min-width: 1024px) {
+  #Save, #cancel {
+    margin-top: 1%;
+  }
+}
 
 .settings {
   max-width: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .settings p {
@@ -373,9 +436,18 @@ textarea {
   width: 50%;
 }
 
+.onoffswitch2 {
+  display: inline-block;
+  width: 50%;
+}
+
 .settings button {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
   margin-top: 2.5%;
   width: 47.5%;
+  margin-bottom: 5%;
+  letter-spacing: 1px;
 }
 
 #save {
@@ -383,6 +455,7 @@ textarea {
   font-weight: bold;
   background-color: #9999CC;
   border: none;
+  margin-left: 2%
 }
 
 #cancel {
@@ -438,6 +511,55 @@ textarea {
     right: 0px;
 }
 
+.onoffswitch2 {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch2-checkbox {
+    display: none;
+}
+.onoffswitch2-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #E8E8E8; border-radius: 20px;
+}
+.onoffswitch2-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch2-inner:before, .onoffswitch2-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch2-inner:before {
+    content: "ON";
+    padding-left: 12px;
+    background-color: #9999CC; color: #FFFFFF;
+}
+.onoffswitch2-inner:after {
+    content: "OFF";
+    padding-right: 12px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch2-switch {
+    display: block; width: 17px; margin: 6.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #E8E8E8; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-inner {
+    margin-left: 0;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-switch {
+    right: 0px;
+}
+
 select {
   width: 96%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }

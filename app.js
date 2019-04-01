@@ -1,4 +1,17 @@
 console.log("connected");
+//FORM VALIDATION
+var usearch = document.getElementById('usearch');
+var umessage = document.getElementById('umessage');
+var submit = document.getElementById('send')
+
+submit.addEventListener('click', (e) => {
+    if (usearch.value === "" || umessage.value === "") {
+        e.preventDefault();
+        alert('PLEASE COMPLETE BOTH FIELDS')
+    } else {
+        alert('CONGRATULATIONS! YOUR MESSAGE HAS BEEN SENT SUCCESSFULLY!!')
+    }
+});
 
 //DELETE ALERT ON BUTTON CLICK
 $(document).ready(function(){

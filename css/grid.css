@@ -26,7 +26,15 @@ main {
 }
 
 /* TABLET 768PX */
-
+@media (min-width: 768px) {
+  .main-container {
+    grid-template-columns: 5% 47.5% 47.5%;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+  }
+}
 
 /* DESKTOP 1024PX */
 @media (min-width: 1024px) {

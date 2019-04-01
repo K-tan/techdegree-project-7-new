@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700" rel="stylesheet">
   <title>WebApp Dashboard</title>
 </head>
 <body class="main-container">
@@ -30,10 +31,11 @@
     	</g>
     </g>
     </svg>
-  <div class="vertical-line" style="height: 45px;">
+    <span class="alert-dot"></span>
+  <div class="vertical-line" style="height: 30px;">
   </div>
   <img class="profile-photo" src="images/profile-photo.jpg" alt="profile-photo">
-  <p>Jenna Cassidy</p>
+  <p class="p-name">Jenna Cassidy</p>
 </div>
 
 </header>
@@ -153,21 +155,21 @@
   </div>
 
   <div class="traffic-chart">
-    <h4>TRAFFIC</h4>
+    <h4 class="h4">TRAFFIC</h4>
     <canvas id="myLineChart" width="1200" height="400"></canvas>
   </div>
 
   <div class="chart-container">
     <div class="barAndpie">
-      <h4>DAILY TRAFFIC</h4>
+      <h4 class="h4">DAILY TRAFFIC</h4>
       <canvas id="myBarChart" width="800" height="400"></canvas>
     </div>
     <div class="barAndpie">
-      <h4>MOBILE USERS</h4>
+      <h4 class="h4">MOBILE USERS</h4>
       <canvas id="myPieChart" width="800" height="400"></canvas>
     </div>
   </div>
-
+<h4 class="social-stat-heading">SOCIAL STATS</h4>
   <div class="social-stats-container">
 
         <div class="stats">
@@ -313,9 +315,15 @@
         <div class="bottom-two">
           <div class="message-user">
             <h4>MESSAGE USER</h4>
-            <input type="search" id="user-search" placeholder="Search for user">
-            <textarea rows="4" cols="50">Message for User</textarea>
-            <button id="send">SEND</button>
+
+
+            <form name="myForm">
+              <input id="usearch" type="text" name="usearch" placeholder="Search for user" required>
+              <textarea id="umessage" type="text" name="umessage" rows="4" cols="50" placeholder="Message for User"required></textarea>
+              <button type="submit" id="send">SEND</button>
+            </form>
+
+
           </div>
 
           <div class="settings">
@@ -330,11 +338,11 @@
                   </label>
               </div>
               <p>Set Profile to Public</p>
-              <div class="onoffswitch">
-                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                  <label class="onoffswitch-label" for="myonoffswitch">
-                      <span class="onoffswitch-inner"></span>
-                      <span class="onoffswitch-switch"></span>
+              <div class="onoffswitch2">
+                  <input type="checkbox" name="onoffswitch2" class="onoffswitch2-checkbox" id="myonoffswitch2" checked>
+                  <label class="onoffswitch2-label" for="myonoffswitch2">
+                      <span class="onoffswitch2-inner"></span>
+                      <span class="onoffswitch2-switch"></span>
                   </label>
               </div>
             </div>
