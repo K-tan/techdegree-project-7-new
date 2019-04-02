@@ -200,7 +200,6 @@ canvas {
 .social-stats-container {
   margin-left: 2.5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit);
   grid-gap: 20px;
 }
 
@@ -409,7 +408,7 @@ textarea {
   background-color: #9999CC;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
-  margin-top: 4.5%;
+  margin-top: 5.5%;
 }
 
 /* ********************************Settings & Toggle******************************** */
